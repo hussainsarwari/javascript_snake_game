@@ -9,7 +9,6 @@ let highscore=document.querySelector("#high_score");
 let score=document.querySelector("#score");
 let play_btn=document.querySelector("#play");
 let massage=document.querySelector("#massage");
-let x=0,y=0;
 let left_clicked=true;
 let right_clicked=true;
 let up_clicked=true;
@@ -17,11 +16,14 @@ let down_clicked=true;
 let direction;
 let stop1,stop2,stop3,stop4;
 // random number
-let ran1=1160*Math.random();
-let ran2=480*Math.random();
+let ran_x=1160*Math.random();
+// let ran_x=1
+let ran_y=480*Math.random();
+// let ran_y=0
 
 
-
+console.log('ranx:'+ran_x);
+console.log('rany'+ran_y);
 // call  functions
 
 
@@ -33,17 +35,25 @@ play_btn.addEventListener("click",()=>{
 
 
 // move the snake 
-let g=190,h=110;
+let x=190,y=110;
 
 document.onkeydown=function (e){
 if(e.keyCode==37 && left_clicked){//left
    // debugger
       stop1=setInterval(()=>{
-         g-=2;
-            snake.style.left=g+"px";
-         
+         x-=1;
+         console.log('x:'+x)
+            snake.style.left=x+"px";
+        if ((x==parseInt(ran_x) ||parseInt(ran_x)<=186 ) &&  (y==parseInt(ran_y) ||parseInt(ran_y)<=103 )) {
+         if((parseInt(ran_x)<=186) && (x==183)){
+            alert(12)
+         }
+         else if(parseInt(ran_x)>=186){
+alert(7777)
+         }
+        } 
         
-         if(g==183){
+         if(x==183){
             alert("you losed");
       }
          },7)
@@ -64,11 +74,19 @@ else if(e.keyCode==38 && up_clicked)
 {
 
   stop2= setInterval(()=>{//top
-      h-=1;
-      snake.style.top=h+"px";
-    
+      y-=1;
+      snake.style.top=y+"px";
+      console.log("y:"+(y-99));
+   //    if (y==parseInt(ran_y) ||parseInt(ran_y)<=103 ) {
+   //       if((parseInt(ran_y)<=103) && (y==103)){
+   //          alert(6666666666612)
+   //       }
+   //       else if(parseInt(ran_y)>=103){
+   // alert(777777777777778898777)
+   //       }
+   //      }    
 //lose game
-      if(h==99){
+      if(y==99){
       alert("you losed");
       }
      
@@ -86,9 +104,19 @@ down_clicked=true;
 }
 if(e.keyCode==39 && right_clicked){
   stop3= setInterval(()=>{//right
-      g+=1;
-      snake.style.left=g+"px";
-      if(g==1163){
+      x+=1;
+      console.log('x:'+x);
+      snake.style.left=x+"px";
+      if (x==parseInt(ran_x) ||parseInt(ran_x)<=186 ) {
+         if((parseInt(ran_x)<=186) && (x==183)){
+            alert(12)
+         }
+         else if(parseInt(ran_x)>=186){
+alert(7777)
+         }
+        } 
+        
+      if(x==1163){
          alert("you losed");
          }
       },7)
@@ -104,9 +132,19 @@ if(e.keyCode==39 && right_clicked){
  up_clicked=true;
 }else if(e.keyCode==40 && down_clicked){//down
 stop4=setInterval(() => {
-   h+=1;
-   snake.style.top=h+"px";
-   if(h==480){
+   y+=1;
+   snake.style.top=y+"px";
+   console.log("y:"+(y-99));
+ 
+   if (y==parseInt(ran_y) ||parseInt(ran_y)<=103 ) {
+      if((parseInt(ran_y)<=103) && (y==103)){
+         alert(6666666666612)
+      }
+      else if(parseInt(ran_y)>=103){
+alert(777777777777778898777)
+      }
+     } 
+   if(y==480){
       alert("you losed");
       }
 }, 7);    
@@ -150,14 +188,14 @@ if (direction=="right_left"){
 }
 
 function seed_possion(){
-  seed.style.left=ran1+"px";
-  seed.style.top=ran2+"px";
-  if(parseInt(seed.style.left)<=190){
-   seed.style.left=240+"px";
+  seed.style.left=ran_x+"px";
+  seed.style.top=ran_y+"px";
+  if(parseInt(seed.style.left)<=186){
+   seed.style.left=185+"px";
 
   }
   if(parseInt(seed.style.top)<110){
-   seed.style.top=150+"px";
+   seed.style.top=103+"px";
   }
 
 }
