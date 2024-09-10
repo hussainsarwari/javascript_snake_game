@@ -34,8 +34,9 @@ You can customize the game by modifying the following configuration files:
 - style.css (for visual appearance)
 Refer to the comments in these files for detailed configuration options.
 ## Demo
+![snake game](https://github.com/hussainsarwari/javascript_snake_game/blob/master/snake%20game.png)
 
-Insert gif or link to demo
+
 
 
 ## License
