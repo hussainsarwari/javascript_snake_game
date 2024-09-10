@@ -2,33 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
     <link rel="stylesheet" href="style.css">
-
-    <title>snake game</title>
 </head>
 <body>
-    
-    <h1> Snake game</h1>
-    <div id="border">
-  
-        <span id="snake"></span>
-        <span id="seed"></span>
+    <div class="game-info">
+        <span id="score">Score: 0</span>
+        <span id="status">Press Start to Begin</span>
     </div>
- <button id="play">play</button>
-
-<h2 id="score"></h2>
-<H2 id="high_score">High score: 0</H2>
-<div id="massage">massage</div>
-
-
-
-
-
-
-
-
-<script src="snakejs.js"></script>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div class="game-buttons">
+        <button id="startButton">
+            P L A Y
+           
+            </div>
+            <span id="rightArrow" class="arrow"></span>
+            <span id="leftArrow" class="arrow"></span>
+        </button>
+    </div>
+    <script src="snakejs.js"></script>
 </body>
 </html>
