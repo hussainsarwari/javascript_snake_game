@@ -60,6 +60,7 @@ function resumeGame() {
   startButton.disabled = true;
 }
 
+
 // Draw the snake on the canvas
 function drawSnake() {
   ctx.fillStyle = "#4CAF50"; // Snake color
