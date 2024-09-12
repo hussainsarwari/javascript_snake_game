@@ -10,6 +10,7 @@ const scale = 5;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 
+
 // Snake and food
 let snake = [];
 let food = {};
