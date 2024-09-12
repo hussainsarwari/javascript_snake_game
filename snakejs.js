@@ -69,6 +69,7 @@ function drawSnake() {
   });
 }
 
+
 // Draw the food on the canvas
 function drawFood() {
   ctx.fillStyle = "#FF5722"; // Food color
