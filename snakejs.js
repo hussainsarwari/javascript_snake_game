@@ -19,6 +19,7 @@ let score = 0;
 let gameInterval;
 let isPaused = false;
 
+
 // Initialize game
 function init() {
     snake = [
