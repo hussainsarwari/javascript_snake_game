@@ -1,4 +1,3 @@
-
 # Online Snake game 
 
 Welcome to the Snake Game! This classic arcade game is implemented using [JavaScript] and features a modern twist on the traditional gameplay. This README provides an overview of the game, its features, installation instructions, and usage.
