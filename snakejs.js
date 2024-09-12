@@ -33,7 +33,6 @@ function init() {
   startButton.disabled = true;
   pauseButton.disabled = false;
 }
-
 // Start the game
 function startGame() {
   init();
