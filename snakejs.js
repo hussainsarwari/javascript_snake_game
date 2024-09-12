@@ -37,7 +37,6 @@ function init() {
 function startGame() {
   init();
 }
-
 // Pause the game
 function pauseGame() {
   if (!isPaused) {
