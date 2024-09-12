@@ -76,6 +76,7 @@ function drawFood() {
   ctx.fillRect(food.x, food.y, scale, scale);
 }
 
+
 // Place food at a random position
 function placeFood() {
   food = {
