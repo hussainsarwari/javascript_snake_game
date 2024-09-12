@@ -50,7 +50,6 @@ function pauseGame() {
     resumeGame();
   }
 }
-
 // Resume the game
 function resumeGame() {
   gameInterval = setInterval(update, 100);
